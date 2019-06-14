@@ -63,8 +63,6 @@ def qiniu_test(
                 f.close()
                 print(item['key'], '结束写入')
 
-                import pdb
-                pdb.set_trace()
                 ret, resp = u_handler.putfile(u_bucket_name, item['key'], file_path)
                 if resp.status_code == 200:
                     # 本地记录ufile写入成功的key 
